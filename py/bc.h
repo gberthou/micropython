@@ -214,7 +214,7 @@ typedef struct _mp_code_state_t {
     struct _mp_obj_frame_t *frame;
     #endif
     // Variable-length
-    mp_obj_t state[0];
+    mp_obj_t state[];
     // Variable-length, never accessed by name, only as (void*)(state + n_state)
     // mp_exc_stack_t exc_state[0];
 } mp_code_state_t;
